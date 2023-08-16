@@ -118,7 +118,7 @@ bool utils::has_tsx_force_abort()
 {
 #if defined(ARCH_X64)
 	static const bool g_value = get_cpuid(0, 0)[0] >= 0x7 && (get_cpuid(7, 0)[3] & 0x2000) == 0x2000;
-	return g_value;
+	return true;
 #else
 	return false;
 #endif
